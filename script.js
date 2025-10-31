@@ -17,8 +17,9 @@ sizeBtn.addEventListener('click', () => {
 
 container.addEventListener("mouseover", (event) => {
     if (!(event.target.className === 'container')) {
-        event.target.classList.add('changed');
+        event.target.style.backgroundColor = randomRGB();
     }
+    
 
 });
 
@@ -40,4 +41,12 @@ function deleteGrid() {
             container.removeChild(child);
             child = container.lastElementChild;
         }
+}
+
+
+function randColorNum() {
+    return Math.floor(Math.random() * 256);
+}
+function randomRGB(){
+    return `rgb(${randColorNum()}, ${randColorNum()}, ${randColorNum()})`;
 }
