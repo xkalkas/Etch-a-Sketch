@@ -16,11 +16,16 @@ sizeBtn.addEventListener('click', () => {
 });
 
 container.addEventListener("mouseover", (event) => {
-    if (!(event.target.className === 'container')) {
-        event.target.style.backgroundColor = randomRGB();
+    let alreadyPassed = false;
+    if(event.target.style.backgroundColor){
+        alreadyPassed = true;
     }
-    
-
+    if (!(event.target.className === 'container') && alreadyPassed===false) {
+        event.target.style.backgroundColor = randomRGB();
+        event.target.style.opacity = 0.1;
+    }else if(!(event.target.className === 'container') && alreadyPassed===true){
+        event.target.style.opacity = Number(event.target.style.opacity) + 0.1;
+    }
 });
 
 function createGrid() {
