@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: space-evenly;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 960px;
+
+}
+
+.gridbox{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.size-btn {
+    width: 90px;
+    height:60px;
+    border-radius: 5px;
+    border: 2px solid darkred;
+    background-color: rgb(106, 194, 106);
+}
+
+.changed {
+    background-color: darkred;
+}
